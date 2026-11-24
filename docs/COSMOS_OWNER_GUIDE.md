@@ -59,3 +59,8 @@ See [EMAIL_ALERTS.md](EMAIL_ALERTS.md). Alert code is prepared; activation requi
 ## Verified with the owner
 
 Admin login, property price/details edits, photo upload and cover display, and the customer enquiry arriving in the private dashboard were demonstrated successfully on 24 November 2026.
+
+
+## Git connection checkpoint — 24 November 2026
+
+The owner connected this repository to the existing Cosmos Vercel project. This documentation commit is the automatic-deployment verification trigger; check Vercel's deployment record for this commit before marking automation as fully verified.
