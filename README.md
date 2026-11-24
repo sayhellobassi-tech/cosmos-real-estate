@@ -35,6 +35,8 @@ Open http://127.0.0.1:4173. The connected Supabase backend is live: local admin 
 
 ## Documentation
 
+- [Owner guide, editing and backups](docs/COSMOS_OWNER_GUIDE.md)
+- [Email alert activation](docs/EMAIL_ALERTS.md)
 - [Admin account setup](docs/ADMIN_SETUP.md)
 - [Full handover and file map](docs/PROJECT_HANDOVER.md)
 - [Verification results](docs/VERIFICATION.md)
@@ -46,6 +48,6 @@ Open http://127.0.0.1:4173. The connected Supabase backend is live: local admin 
 
 The owner must create their admin account privately before first login. No passwords are included in this repository. Public keys in `src/config.js` are intentionally browser-readable; service-role credentials are never committed.
 
-Listings/photos are illustrative. No payments, automated email notifications or WhatsApp chatbot are configured. Website enquiries are stored in the admin inbox; emails and WhatsApp messages remain in their apps.
+Listings/photos are illustrative. No payments or WhatsApp chatbot are configured. Email-alert code is prepared; provider credentials and an inbox delivery test are still required. Website enquiries are stored in the admin inbox; emails and WhatsApp messages remain in their apps.
 
 Source changes need to be deployed to Vercel. Database edits through the dashboard appear after refreshing the public website; no deployment is needed for those changes.

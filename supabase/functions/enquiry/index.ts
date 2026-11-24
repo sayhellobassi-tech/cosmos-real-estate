@@ -1,3 +1,4 @@
+import {notifyEnquiry} from './notify.mjs';
 const allowedOrigins=new Set(['https://cosmos-real-estate-demo.vercel.app','http://127.0.0.1:4173','http://localhost:4173']);
 Deno.serve(async(req:Request)=>{
  const origin=req.headers.get('origin')||'';
@@ -19,6 +20,8 @@ Deno.serve(async(req:Request)=>{
   const ipHash=Array.from(new Uint8Array(digest)).map(n=>n.toString(16).padStart(2,'0')).join('');
   const response=await fetch(Deno.env.get('SUPABASE_URL')+'/rest/v1/rpc/submit_cosmos_enquiry',{method:'POST',headers:{apikey:secret,Authorization:'Bearer '+secret,'Content-Type':'application/json'},body:JSON.stringify({p_request_id:request_id,p_name:name,p_email:email,p_property_id:property_id,p_message:message,p_locale:locale,p_ip_hash:ipHash})});
   if(!response.ok){const error=await response.json().catch(()=>({}));if(error.message?.includes('Too many'))return reply(429,{error:'Too many enquiries. Please try again later or contact us on WhatsApp.'});if(error.message?.includes('Property is not available'))return reply(400,{error:'This listing is no longer available. Please refresh the page.'});return reply(503,{error:'We could not save your enquiry. Please try email or WhatsApp.'});}
-  return reply(201,{received:true,reference:await response.json()});
+  const reference=await response.json();
+  try{await notifyEnquiry({id:reference,url:Deno.env.get('SUPABASE_URL')!,serviceKey:secret,emailKey:Deno.env.get('RESEND_API_KEY'),from:Deno.env.get('ENQUIRY_FROM_EMAIL')||'Cosmos Alerts <onboarding@resend.dev>'});}catch{}
+  return reply(201,{received:true,reference});
  }catch{return reply(503,{error:'We could not save your enquiry. Please try email or WhatsApp.'});}
 });

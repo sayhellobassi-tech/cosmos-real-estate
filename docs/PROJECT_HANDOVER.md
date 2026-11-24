@@ -46,7 +46,7 @@ For a new Supabase project, run migrations in order, update the public config, d
 
 ## Enquiry handling
 
-The form requires consent and saves a record in Supabase. Success is shown only after persistence. It does not send an email notification. Admins check the inbox and reply manually via email/WhatsApp. Messages are limited to 4,000 characters. Rate limits: 3 per email/hour, 10 per hashed source IP/hour and 200/day globally. IP hashes and per-email counters are internal and not exposed to visitors. Add a CAPTCHA/production abuse controls if traffic requires it.
+The form requires consent and saves a record in Supabase. Success is shown only after persistence. Email alert code now runs after saving; activation requires RESEND_API_KEY in Supabase Secrets. See EMAIL_ALERTS.md. Admins check the inbox and reply manually via email/WhatsApp. Messages are limited to 4,000 characters. Rate limits: 3 per email/hour, 10 per hashed source IP/hour and 200/day globally. IP hashes and per-email counters are internal and not exposed to visitors. Add a CAPTCHA/production abuse controls if traffic requires it.
 
 ## Operations and ownership
 
@@ -54,4 +54,4 @@ Back up database records and uploaded images separately from GitHub. Git stores 
 
 Supabase's public image bucket is for property marketing images, not identity documents, contracts or private client files. Archived images remain public until their Storage objects are deleted. Admin sessions are stored for the current browser tab and sign-out clears them.
 
-Automated notifications, payment processing and WhatsApp automation require separate integrations. Current sample listings must be replaced/verified before taking real customer commitments. The authenticated `is_cosmos_admin` SECURITY DEFINER function intentionally exposes only a caller-specific boolean; its private allowlist is never exposed.
+Email notification activation is documented in EMAIL_ALERTS.md. Payment processing and WhatsApp automation are outside this demo. Current sample listings must be replaced/verified before taking real customer commitments. The authenticated `is_cosmos_admin` SECURITY DEFINER function intentionally exposes only a caller-specific boolean; its private allowlist is never exposed.
