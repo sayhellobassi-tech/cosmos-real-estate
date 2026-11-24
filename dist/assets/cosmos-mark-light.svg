@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Cosmos Real Estate light architectural orbit mark</title>
+  <desc id="desc">Three architectural towers within an open C-shaped orbit, with a small star at the opening.</desc>
+  <path d="M74 19a38 38 0 1 0 0 58" stroke="#D6B879" stroke-width="3.2" stroke-linecap="square"/>
+  <g stroke="#F7F7EF" stroke-width="2.6" stroke-linejoin="miter">
+    <path d="M29 70V46l14-8v32M43 70V25l15-7v52M58 70V39l13 7v24M25 70h50"/>
+    <path d="M35 47v15M50 30v32M64 47v15" stroke-width="1.5"/>
+  </g>
+  <path d="m82 41 2 5L89 48l-5 2L82 55l-2-5L75 48l5-2Z" fill="#D6B879"/>
+</svg>

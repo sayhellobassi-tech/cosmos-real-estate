@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 130" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Cosmos Real Estate</title>
+  <desc id="desc">Original architectural orbit emblem and Cosmos Real Estate wordmark in forest green and gold.</desc>
+  <g transform="translate(5 14) scale(1.06)">
+    <path d="M74 19a38 38 0 1 0 0 58" stroke="#B38A45" stroke-width="3.2"/>
+    <g stroke="#173A32" stroke-width="2.6" stroke-linejoin="miter"><path d="M29 70V46l14-8v32M43 70V25l15-7v52M58 70V39l13 7v24M25 70h50"/><path d="M35 47v15M50 30v32M64 47v15" stroke-width="1.5"/></g>
+    <path d="m82 41 2 5L89 48l-5 2L82 55l-2-5L75 48l5-2Z" fill="#B38A45"/>
+  </g>
+  <text x="124" y="78" fill="#173A32" font-family="Georgia, 'Times New Roman', serif" font-size="58" letter-spacing="6">COSMOS</text>
+  <text x="129" y="105" fill="#745A2D" font-family="Arial, sans-serif" font-size="14" letter-spacing="7">REAL ESTATE</text>
+</svg>
