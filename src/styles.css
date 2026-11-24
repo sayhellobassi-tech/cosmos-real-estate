@@ -29,3 +29,7 @@ h1,h2,h3{overflow-wrap:anywhere}.hero-copy,.hero-feature,.perspective-copy,.sect
 /* Keep the shared WhatsApp action visible above page sections on every route. */
 .floating-contact{position:fixed;z-index:60;bottom:calc(20px + env(safe-area-inset-bottom,0px));inset-inline-end:20px;min-width:52px;min-height:52px;justify-content:center;background:#173a32;color:#fff;isolation:isolate}.floating-contact svg{display:block;flex:none;width:26px;height:26px}.floating-contact:focus-visible{outline:3px solid #d6b879;outline-offset:4px}
 @media(max-width:600px){.floating-contact{width:56px;height:56px;padding:14px;bottom:calc(16px + env(safe-area-inset-bottom,0px));inset-inline-end:16px}.floating-contact svg{width:28px;height:28px}}
+
+.property-description{white-space:pre-line}.enquiry-form .enquiry-consent{display:flex;flex-direction:row;align-items:flex-start;gap:12px;font-weight:400}.enquiry-consent input{width:20px;min-width:20px;margin-top:3px}.enquiry-honeypot{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}.enquiry-form button:disabled{opacity:.6;cursor:wait}.hero h1 em{color:var(--accent,#e5d8b9)}
+
+input,textarea,select,button{scroll-margin-top:170px}

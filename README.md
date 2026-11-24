@@ -1,10 +1,16 @@
 # Cosmos Real Estate
 
-Source code for https://cosmos-real-estate-demo.vercel.app
+Live website: https://cosmos-real-estate-demo.vercel.app
 
-## Run locally
+Admin login: https://cosmos-real-estate-demo.vercel.app/admin/
 
-Requires Node.js 22 or later. No external dependencies are needed for the current frontend.
+## Stack
+
+Static HTML/CSS/JavaScript frontend on Vercel. Supabase PostgreSQL, Auth, Storage and Edge Functions provide the backend.
+
+## Local development
+
+Requires Node.js 22 or newer. No frontend dependencies are required.
 
 ```sh
 npm run check
@@ -12,31 +18,34 @@ npm run build
 npm start
 ```
 
-Open http://127.0.0.1:4173.
+Open http://127.0.0.1:4173. The connected Supabase backend is live: local admin changes affect the same database as production.
 
-## Files
+## Features
 
-- src/: editable JavaScript, translations, property data and styles
-- build.mjs: static route builder
-- dist/: deployable pages and original image assets
-- serve.mjs: local development server
-- vercel.json: deployment settings
+- Database-backed published listings, filters and property detail pages
+- Four languages and responsive layouts
+- Persistent WhatsApp button and direct email links
+- Saved website enquiries with validation, consent and rate limits
+- Admin login restricted to approved verified accounts
+- Property editing, publication/archiving, availability and USD prices
+- Public listing photo uploads, galleries and cover selection
+- Private enquiry inbox with status and internal notes
+- Contact details, primary colour and accent settings
+- Database audit log
 
-## Current features
+## Documentation
 
-Property browsing, filters, property details, galleries, four languages, WhatsApp enquiries and email drafts.
+- [Admin account setup](docs/ADMIN_SETUP.md)
+- [Full handover and file map](docs/PROJECT_HANDOVER.md)
+- [Verification results](docs/VERIFICATION.md)
+- `supabase/migrations/`: database source and access policies
+- `supabase/functions/enquiry/`: server-side enquiry endpoint
+- `tests/rls_verification.sql`: transaction-only permission checks
 
-Email: mngmntstd@gmail.com
-WhatsApp: +233 50 120 6171
+## Important limits
 
-Listings and prices are illustrative. Email drafts must be sent by the visitor.
+The owner must create their admin account privately before first login. No passwords are included in this repository. Public keys in `src/config.js` are intentionally browser-readable; service-role credentials are never committed.
 
-## Backend status
+Listings/photos are illustrative. No payments, automated email notifications or WhatsApp chatbot are configured. Website enquiries are stored in the admin inbox; emails and WhatsApp messages remain in their apps.
 
-A separate Cosmos Supabase project exists. Database schema, secure admin dashboard, property management, image storage and saved enquiries are not implemented yet.
-
-## Deployment
-
-Connect this repository to the existing cosmos-real-estate-demo Vercel project, with build command npm run build and output directory dist. The current live deployment was uploaded directly; Git-based deployment is not connected yet.
-
-Keep passwords, service-role keys and environment secrets out of Git.
+Source changes need to be deployed to Vercel. Database edits through the dashboard appear after refreshing the public website; no deployment is needed for those changes.

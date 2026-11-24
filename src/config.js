@@ -1,0 +1,1 @@
+export const config = {"url":"https://iylhpckitjozlxgqzflk.supabase.co","key":"sb_publishable_92Aw17IJCIlRFlr1rAIc7A_lD9B52iC","functionKey":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml5bGhwY2tpdGpvemx4Z3F6ZmxrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTU1MjUyNjUsImV4cCI6MjExMTEwMTI2NX0._VjlmXAOqDKexoJUIxnu3tukVGaBxB1m2aD2udOVKwc"};
